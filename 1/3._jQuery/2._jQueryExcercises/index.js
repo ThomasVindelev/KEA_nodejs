@@ -41,7 +41,6 @@ $(document).ready(() => {
     console.log("This will only be executed after the DOM has parsed")
 })
 
-
 // $(() => {
 // This does the same thing
 // })

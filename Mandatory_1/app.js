@@ -1,4 +1,7 @@
-const app = require("express")()
+const express = require("express")
+const app = express()
+
+app.use(express.static(__dirname + '/public'));
 
 app.listen(3000)
 
@@ -17,3 +20,4 @@ app.get("/REST", (req, res) => {
 app.get("/syntax", (req, res) => {
     res.sendFile(__dirname + "/public/syntax.html")
 })
+
