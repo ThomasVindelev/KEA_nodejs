@@ -19,9 +19,9 @@ var numberOne = "1.10";
 var numberTwo = "2.30";
 
 var result = parseFloat(numberOne) + parseFloat(numberTwo);
-var result2 = (parseFloat(numberOne) + parseFloat(numberTwo)).toFixed(2);
+var result2 = (parseFloat(numberOne) + parseFloat(numberTwo)).toFixed(6);
 
-console.log(result.toFixed(2));
+console.log((result.toFixed(2)));
 console.log(result2);
 
 // --------------------------------------

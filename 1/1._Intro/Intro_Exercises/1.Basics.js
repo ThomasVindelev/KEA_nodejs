@@ -1,6 +1,8 @@
 var firstName = "Thomas";
 var lastName = "Vindelev";
+let myName = `My name is ${firstName}`
 
+console.log(myName)
 console.log("My first name is", firstName, "and my last name is", lastName);
 console.log(`My first name is ${firstName} and my last name is ${lastName}`);
 

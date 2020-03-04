@@ -1,4 +1,13 @@
-pre {
-    width: 300px;
-    float: left;
+#code {
+    padding: 5px 10px 10px 10px;
+    background-color: #1d1d1d;
+    border-radius: 10px;
+    width: fit-content;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#code span {
+    color: rgb(202, 202, 202);
+    font-family: monospace;
 }

@@ -19,9 +19,14 @@ console.log(myObj[hallo]); //
 
 // Create an object that has your name and age. 
 
-var me = {
+let javascriptObject = {
+    name: "Thomas Skovgaard Vindelev",
+    age: 24,
+}
+
+let jsonObject = {
     "name": "Thomas Skovgaard Vindelev",
-    "age": 24,
+    "age": 24
 }
 
 // --------------------------------------
