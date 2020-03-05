@@ -8,9 +8,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Commands and keywords</title>
 </head>
 <header id="nav-bar"></header>
 <body>
+    <div id="page">
+        <h1>Commands and keywords documentation</h1>
+        <br>
+        <p>Working with node.js we're using a lot of different terminal commands to navigate, manage and execute files.</p>
+        <ul>
+            <li>
+                <h2>npm (Node Package Manager)</h2>
+                <p>npm is a package manager for Javascript. Using the <b>package.json</b> file, it can identify and fetch all the required dependencies for a given project.</p>
+                <p>It can also be used for running scripts defined inside the package.json script section.</p>
+                <ul>
+                    <li>
+                        <h4>npm i</h4>
+                        <p>This command installs all dependencies defined in the package.json file. These are then downloaded from the npm website and added to a folder named <b>node_modules</b>.</p>
+                        <p>We can use both <b>npm i</b> or <b>npm install</b>. This makes no difference, since it's just an abbreviation:</p>
+                        <div id="code">
+                            <span>$ npm i</span>
+                            <br>
+                            <span>$ npm install</span>
+                        </div>
+                        <p>If we just want to fetch libraries directly from the command-line, we can type the name of the library after <b>npm i</b>. These will then be added to both package.json and node_modules:</p>
+                        <div id="code">
+                            <span>$ npm i express</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>npm run</h4>
+                        <p>The <b>run</b> command is used to run scripts from the package.json file. These scripts can be useful, but they can also work differently depending on your operating system.</p>
+                        <p>Defining the scripts:</p>
+                        <div id="code">
+                            <span>"scripts": {</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;"start": "cross-env PORT=80 node app.js",</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;"start-dev": "cross-env PORT=3000 nodemon app.js"</span>
+                            <br>
+                            <span>}</span>
+                        </div>
+                        <p>The <b>cross-env</b> tag is another dependency - fetched by npm - which allows this way of forcing ports to work independently of the operating system.</p>
+                        <p>Running the scripts:</p>
+                        <div id="code">
+                            <span>$ npm run start-dev</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>npm init</h4>
+                        <p>Creates the package.json file. By using this command, we </p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <h2>node</h2>
+                <p>This keyword is used to execute a .js file.</p>
+            </li>
+            <li>
+                <h2>Express</h2>
+                <p>Express is a lightweight node.js tool for serving websites.</p>
+            </li>
+            <li>
+                <h2>budo</h2>
+            </li>
+            <li>
+                <h2>General terminal commands</h2>
+            </li>
+        </ul>
+    </div>
 </body>
 </html>
