@@ -57,13 +57,38 @@
                     </li>
                     <li>
                         <h4>npm init</h4>
-                        <p>Creates the package.json file. By using this command, we </p>
+                        <p>By using this command, we don't need no longer need to declare the package.json ourselves.</p>
+                        <p>However this isn't necessary in the first place, since <b>npm i [packagename]</b> also will create the file.</p>
+                        <p>It's is useful for publishing npm packages.</p>
                     </li>
                 </ul>
             </li>
             <li>
-                <h2>node</h2>
-                <p>This keyword is used to execute a .js file.</p>
+                <h2>Running files</h2>
+                <p>Running .js files can be done in different ways, but we can also run html-files without the need of an express server.</p>
+                <ul>
+                    <li>
+                        <h4>node</h4>
+                        <p>By using <b>node [filename]</b> we can run our .js files, which can act as a server for a website or execute methods.</p>
+                        <p>This commands needs to be executed inside the folder with the desired .js target.</p>
+                        <p>If we were to launch a website this way, we would need to manually relaunch the site if changes were made to the files in action.</p>
+                        <div id="code">
+                            <span>$ node app.js</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>nodemon</h4>
+                        <p>nodemon is a project dependency which can be fetched by using <b>npm nodemon</b>.</p>
+                        <p>Using <b>nodemon [filename]</b> to execute our .js files, we are no longer required to manually re-run them in the terminal, since this is done automatically.</p>
+                        <div id="code">
+                            <span>$ nodemon app.js</span>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>budo</h4>
+                        <p>If we want to launch html-files </p>
+                    </li>
+                </ul>
             </li>
             <li>
                 <h2>Express</h2>
