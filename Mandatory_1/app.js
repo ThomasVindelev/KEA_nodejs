@@ -14,7 +14,6 @@ const server = app.listen(port, (error) => {
     }
 });
 
-
 app.get("/", (req, res) => {
     return res.sendFile(__dirname + "/public/index.html")
 })
