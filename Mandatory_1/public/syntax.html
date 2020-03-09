@@ -73,9 +73,9 @@
                             <span>console.log(`My first name is ${firstName} and my last name is ${lastName}`)</span>
                             <br>
                             <br>
-                            <span>// My name is Thomas</span>
+                            <span><span>// My name is Thomas</span></span>
                             <br>
-                            <span>// My first name is Thomas and my last name is Vindelev</span>
+                            <span><span>// My first name is Thomas and my last name is Vindelev</span></span>
                         </div>
                     </li>
                     <li>
@@ -91,7 +91,7 @@
                             <span>console.log(parseFloat(numberOne) + parseFloat(numberTwo))</span>
                             <br>
                             <br>
-                            <span>// 3.4</span>
+                            <span><span>// 3.4</span></span>
                         </div>
                     </li>
                 </ul>
@@ -154,15 +154,90 @@
                     <li>
                         <h4>Callback functions</h4>
                         <p>A callback function is injected into another functions arguments. These methods can also be defined directly in the arguments.</p>
-                        <p>Because functions are objects we can parse different methods into other methods, in which they will</p>
+                        <p>Because functions are objects we can parse different methods into other methods, in which they will be executed when the initial function tells it to.</p>
+                        <p>The callbacks can be either synchronous or asynchronous, depending on when the callback function will execute.</p>
                     </li>
                 </ul>
             </li>
             <li>
                 <h2>Loops</h2>
+                <p>Loops can be used to run a block of code several times with, sometimes, different outcomes.</p>
+                <p>The most common loops in Javascript are for-loops and while-loops</p>
+                <ul>
+                    <li>
+                        <h4>For-loop</h4>
+                        <p>A for-loop is characterized by the keyword <b>for</b> in front of the statement itself.</p>
+                        <p>The loop often relies on an incrementer, but can also be done as a <b>for/in</b>-loop.</p>
+                        <div id="code">
+                            <span><span>for-loop</span></span>
+                            <br><br>
+                            <span>for (i = 0; i < 2, i++) {</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Hello, number",i)</span>
+                            <br>
+                            <span>}</span>
+                            <br><br>
+                            <span><span>// Hello, number 0</span></span>
+                            <br>
+                            <span><span>// Hello, number 1</span></span>
+                        </div>
+                        <div id="code">
+                            <span><span>for/in-loop</span></span>
+                            <br><br>
+                            <span>let me = {firstName: "Thomas", lastName: "Vindelev"}</span>
+                            <br><br>
+                            <span>for (names in me) {</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;console.log(names)</span>
+                            <br>
+                            <span>}</span>
+                            <br><br>
+                            <span><span>// Thomas</span></span>
+                            <br>
+                            <span><span>// Vindelev</span></span>
+                        </div>
+                    </li>
+                </ul>
+                <p>For-loops in Javascript are similar to the ones we find in Java.<br>However we don't need to declare i as an integer, as Java and Javascript don't have the same rules regarding data types.</p>
             </li>
             <li>
-                <h2>Collections</h2>
+                <h2>Arrays</h2>
+                <p>Arrays are collections that can hold different values. Different data types can be stored in the same array.</p>
+                <ul>
+                    <li>
+                        <h4>Index</h4>
+                        <p>To access data in an array we need to specify the index in which the desired data is located.</p>
+                        <p>Since we can also store objects in an array, can parse a function from an array.</p>
+                        <div id="code">
+                            <span>function calculate(first, second, operation) {</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;return operation(first, second)</span>
+                            <br>
+                            <span>}</span>
+                            <br><br>
+                            <span>function add(first, second) {</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;return first + second</span>
+                            <br><span>}</span>
+                            <br><br>
+                            <span>function subtract(first, second) {</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;return first - second</span>
+                            <br>
+                            <span>}</span>
+                            <br><br>
+                            <span>let operations = [add, subtract]</span>
+                            <br><br>
+                            <span>console.log(calculate(2, 3, operations[0])) <span>// operations returns the first method</span></span>
+                            <br>
+                            <span>console.log(calculate(2, 3, operations[1])) <span>// operations returns the second method</span></span>
+                            <br><br>
+                            <span><span>// 5</span></span>
+                            <br>
+                           <span><span>// -1</span></span>
+                        </div>
+                    </li>
+                </ul>
             </li>
             <li>
                 <h2>Requests</h2>

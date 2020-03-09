@@ -16,3 +16,7 @@
     font-family: monospace;
     font-size: medium;
 }
+
+#code span span {
+    color: rgb(53, 187, 0);
+}
