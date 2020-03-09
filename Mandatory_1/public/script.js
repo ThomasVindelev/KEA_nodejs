@@ -29,3 +29,9 @@ $(document).ready(() => {
           <a class="nav-link" href="/REST">REST</a>
         </li>`)
 })
+
+$(".nav-link").css("text-color", "red")
+
+$("").mouseenter(() => {
+  $("nav-link").css("background-color", "red");
+});
