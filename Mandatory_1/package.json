@@ -4,6 +4,7 @@
     "start-dev": "cross-env PORT=3000 nodemon app.js"
   },
   "dependencies": {
+    "budo": "^11.6.3",
     "cross-env": "^7.0.2",
     "express": "^4.17.1",
     "nodemon": "^2.0.2"

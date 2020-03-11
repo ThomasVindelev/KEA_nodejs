@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,7 +12,7 @@
 </head>
 <header id="nav-bar"></header>
 <body>
-    <div id="page">
+    <div class="page">
         <h1>Syntax documentation</h1>
         <br>
         <p>Javascript syntax is not that different from Java, however it's very different in terms of what we're allowed to do and how we can do it.</p>
@@ -47,7 +47,7 @@
                         <h4>Comma separated sentences</h4>
                         <p>Strings can be built as variables or in the console.</p>
                         <p>This way, javascript will insert spaces on it's own after the comma.</p>
-                        <div id="code">
+                        <div class="code">
                             <span>let firstName = "Thomas"</span>
                             <br>
                             <span>let lastName = "Vindelev"</span>
@@ -57,12 +57,12 @@
                             <br>
                             <br>
                             <span><span>// My first name is Thomas and my last name is Vindelev</span></span>
-                        </div>
+                        </div> 
                     </li>
                     <li>
                         <h4>Template strings</h4>
                         <p>By using backticks (&nbsp;&nbsp;`&nbsp;&nbsp;) as string identifiers, we can inject variables into a string of text.</p>
-                        <div id="code">
+                        <div class="code">
                             <span>let firstName = "Thomas"</span>
                             <br>
                             <span>let lastName = "Vindelev"</span>
@@ -85,7 +85,7 @@
                         <p>Using the parse methods we can cast and work with numerical values from strings.</p>
                         <p>However, we can only use these methods if the string only contains numbers and not letters.</p>
                         <p>Parsing numbers from strings including text will result in NaN (not a number).</p>
-                        <div id="code">
+                        <div class="code">
                             <span>let numberOne = "1.10"</span>
                             <br>
                             <span>let numberTwo = "2.30"</span>
@@ -106,7 +106,7 @@
                         <h4>Javascript objects</h4>
                         <p>Objects in Javascript can be declared with or without key-value pairs.</p>
                         <p>In this example an object is created holding my name and age.</p>
-                        <div id="code">
+                        <div class="code">
                             <span>let javascriptObject = {</span>
                             <br>
                             <span>&nbsp;&nbsp;&nbsp;&nbsp;name: "Thomas Skovgaard Vindelev",</span>
@@ -121,7 +121,7 @@
                         <p>Javascript objects and JSON objects look very similar, but the difference is that JSON needs every key to have quotation marks.</p>
                         <p>Data types such as integers or floats don't need to be annotated with quotation marks, since they're numerical values.</p>
                         <p>Because JSON is used so frequently in combination with Javascript we often just use the JSON way of creating objects.</p>
-                        <div id="code">
+                        <div class="code">
                             <span>let jsonObject = {</span>
                             <br>
                             <span>&nbsp;&nbsp;&nbsp;&nbsp;"name": "Thomas Skovgaard Vindelev",</span>
@@ -136,7 +136,7 @@
                         <p>Adding, modifying or deleting values in an object is possible in several ways.</p>
                         <p>We can add values at the creation of the object, or we can add them later.</p>
                         <p>In this example I made the empty object myObject. Then I gave it a key named <b>newItem</b> with a value of 10, then I modified it and deleted it.</p>
-                        <div id="code">
+                        <div class="code">
                             <span>let myObject = {}</span>
                             <br>
                             <span>myObject["newItem"] = 10</span>
@@ -145,6 +145,9 @@
                             <br>
                             <span>delete myObject.newItem</span>
                         </div>
+                    </li>
+                    <li>
+                        <h4>Storing functions in objects</h4>
                     </li>
                 </ul>
             </li>
@@ -170,7 +173,7 @@
                         <h4>For-loop</h4>
                         <p>A for-loop is characterized by the keyword <b>for</b> in front of the statement itself.</p>
                         <p>The loop often relies on an incrementer, but can also be done as a <b>for/in</b>-loop.</p>
-                        <div id="code">
+                        <div class="code">
                             <span><span>for-loop</span></span>
                             <br><br>
                             <span>for (i = 0; i < 2, i++) {</span>
@@ -183,7 +186,7 @@
                             <br>
                             <span><span>// Hello, number 1</span></span>
                         </div>
-                        <div id="code">
+                        <div class="code">
                             <span><span>for/in-loop</span></span>
                             <br><br>
                             <span>let me = {firstName: "Thomas", lastName: "Vindelev"}</span>
@@ -211,7 +214,7 @@
                         <h4>Index</h4>
                         <p>To access data in an array we need to specify the index in which the desired data is located.</p>
                         <p>Since we can also store objects in an array, can parse a function from an array.</p>
-                        <div id="code">
+                        <div class="code">
                             <span>function calculate(first, second, operation) {</span>
                             <br>
                             <span>&nbsp;&nbsp;&nbsp;&nbsp;return operation(first, second)</span>
@@ -239,6 +242,21 @@
                             <br>
                            <span><span>// -1</span></span>
                         </div>
+                    </li>
+                    <li>
+                        <h4>Push</h4>
+                    </li>
+                    <li>
+                        <h4>Slice</h4>
+                    </li>
+                    <li>
+                        <h4>Spilce</h4>
+                    </li>
+                    <li>
+                        <h4>Pop</h4>
+                    </li>
+                    <li>
+                        <h4>For each</h4>
                     </li>
                 </ul>
             </li>

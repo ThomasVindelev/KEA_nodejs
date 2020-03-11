@@ -33,3 +33,7 @@ app.get("/syntax", (req, res) => {
 app.get("/jQuery", (req, res) => {
     return res.sendFile(__dirname + "/public/jQuery.html")
 })
+
+app.get("/new", (req, res) => {
+    return res.sendFile(__dirname + "/public/new.html")
+})

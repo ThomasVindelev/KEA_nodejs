@@ -21,7 +21,7 @@ console.log(myObj[hallo]); //
 
 let javascriptObject = {
     name: "Thomas Skovgaard Vindelev",
-    age: 24,
+    age: 24
 }
 
 let jsonObject = {

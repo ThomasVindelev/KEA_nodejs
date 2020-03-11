@@ -30,8 +30,11 @@ $(document).ready(() => {
         </li>`)
 })
 
-$(".nav-link").css("text-color", "red")
+$(".used-box").click(() => {
+  $(".used-box").toggleClass("used-boxed-clicked")
+})
 
-$("").mouseenter(() => {
-  $("nav-link").css("background-color", "red");
-});
+$(".closebtn").click(() => {
+  $("#mySidebar").css("width", "0px")
+  $("#main").css("margin-left", "0px")
+})
