@@ -1,40 +1,12 @@
 $(document).ready(() => {
-    let nav_bar = $("#nav-bar")
+    let nav_bar = $("#headerloader")
     nav_bar.append(
-        `<nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="background-image: linear-gradient(#00010D, #222329);">
-        <a class="navbar-brand" href="/">node.js documentation</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto" id="menu">
-            </ul>
-        </div>
-
-        </nav>`)
-
-    let menu = $("#menu")
-    menu.append(
-        `<li class="nav-item">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/syntax">Syntax</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/commands">Commands</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/REST">REST</a>
-        </li>`)
+        `<div class="top-bar">
+        <a id="main-button" href="/">node.js documentation</a>
+        <a class="nav-item" href="/">Home</a>
+        <a class="nav-item" href="/syntax">Syntax</a>
+        <a class="nav-item" href="/commands">Commands</a>
+        <a class="nav-item" href="/REST">REST</a>
+      </div>`)
 })
 
-$(".used-box").click(() => {
-  $(".used-box").toggleClass("used-boxed-clicked")
-})
-
-$(".closebtn").click(() => {
-  $("#mySidebar").css("width", "0px")
-  $("#main").css("margin-left", "0px")
-})

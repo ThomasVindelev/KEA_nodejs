@@ -54,7 +54,15 @@ diet.splice(diet.indexOf("rocolla"), 0, "hamburger", "soda", "pizza");
 // You don't like kale at all. Remove the LAST element of the array.
 // Don't remove by index. You know in advance that it's the last in the array because you are too full already. 
 
-console.log(diet.pop);
+console.log(diet.pop());
+
+let cars = ["Mercedes", "BMW", "Audi"]
+
+console.table(cars)
+
+cars.pop()
+
+console.table(cars)
 
 // --------------------------------------
 // Exercise 6 - Copy array

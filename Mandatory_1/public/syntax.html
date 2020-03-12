@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="script.js"></script>
-        <link rel="stylesheet" href="bootstrap.css">
-        <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Syntax</title>
 </head>
-<header id="nav-bar"></header>
+<header id="headerloader"></header>
 <body>
     <div class="page">
         <h1>Syntax documentation</h1>
-        <br>
         <p>Javascript syntax is not that different from Java, however it's very different in terms of what we're allowed to do and how we can do it.</p>
         <p>For starters we are very used to the idea of working with different classes as objects.</p>
         <ul>
@@ -23,16 +21,16 @@
                 <p>We can use 3 different variable notations - only 2 of them being mutable options.</p>
                 <ul>
                     <li>
-                        <h4>var</h4>
+                        <h3>var</h3>
                         <p>This is a standard global variable notation. It can be referenced from anywhere, and is therefore not an ideal way of declaring variables.</p>
                     </li>
                     <li>
-                        <h4>let</h4>
+                        <h3>let</h3>
                         <p>The let notation is used for declaring variables inside a scope.</p>
                         <p>This means that the variable cannot be referenced in other scope or global namespace.</p>
                     </li>
                     <li>
-                        <h4>const</h4>
+                        <h3>const</h3>
                         <p>This notation states that the variable holds the value it is initiated with. It is therefore non-mutable.</p>
                         <p>A constant doesn't need the overhead memory that a standard variable needs, because the system knows that the value will never change.</p>
                     </li>
@@ -44,7 +42,7 @@
                 <p>Strings are pieces of text that can be worked with in different ways. They can contain all characters, as the characters, no matter their function, are turned into text.</p>
                 <ul>
                     <li>
-                        <h4>Comma separated sentences</h4>
+                        <h3>Comma separated sentences</h3>
                         <p>Strings can be built as variables or in the console.</p>
                         <p>This way, javascript will insert spaces on it's own after the comma.</p>
                         <div class="code">
@@ -60,7 +58,7 @@
                         </div> 
                     </li>
                     <li>
-                        <h4>Template strings</h4>
+                        <h3>Template strings</h3>
                         <p>By using backticks (&nbsp;&nbsp;`&nbsp;&nbsp;) as string identifiers, we can inject variables into a string of text.</p>
                         <div class="code">
                             <span>let firstName = "Thomas"</span>
@@ -81,7 +79,7 @@
                         </div>
                     </li>
                     <li>
-                        <h4>Parsing numbers from strings</h4>
+                        <h3>Parsing numbers from strings</h3>
                         <p>Using the parse methods we can cast and work with numerical values from strings.</p>
                         <p>However, we can only use these methods if the string only contains numbers and not letters.</p>
                         <p>Parsing numbers from strings including text will result in NaN (not a number).</p>
@@ -98,12 +96,13 @@
                     </li>
                 </ul>
             </li>
+            <br>
             <li>
                 <h2>Objects</h2>
                 <p>Objects can store key-value pairs. These can contain regular data types such as strings or numbers, but they can also contain functions.</p>
                 <ul>
                     <li>
-                        <h4>Javascript objects</h4>
+                        <h3>Javascript objects</h3>
                         <p>Objects in Javascript can be declared with or without key-value pairs.</p>
                         <p>In this example an object is created holding my name and age.</p>
                         <div class="code">
@@ -117,7 +116,7 @@
                         </div>
                     </li>
                     <li>
-                        <h4>JSON objects</h4>
+                        <h3>JSON objects</h3>
                         <p>Javascript objects and JSON objects look very similar, but the difference is that JSON needs every key to have quotation marks.</p>
                         <p>Data types such as integers or floats don't need to be annotated with quotation marks, since they're numerical values.</p>
                         <p>Because JSON is used so frequently in combination with Javascript we often just use the JSON way of creating objects.</p>
@@ -132,7 +131,7 @@
                         </div>
                     </li>
                     <li>
-                        <h4>Accessing objects</h4>
+                        <h3>Accessing objects</h3>
                         <p>Adding, modifying or deleting values in an object is possible in several ways.</p>
                         <p>We can add values at the creation of the object, or we can add them later.</p>
                         <p>In this example I made the empty object myObject. Then I gave it a key named <b>newItem</b> with a value of 10, then I modified it and deleted it.</p>
@@ -147,17 +146,18 @@
                         </div>
                     </li>
                     <li>
-                        <h4>Storing functions in objects</h4>
+                        <h3>Storing functions in objects</h3>
                     </li>
                 </ul>
             </li>
+            <br>
             <li>
                 <h2>Functions</h2>
                 <p>Functions are used to execute a number of tasks when called. Functions are also objects, as variables can be assigned at functions.</p>
                 <p>Furthermore, functions can be passed into functions as <b>callback functions.</b></p>
                 <ul>
                     <li>
-                        <h4>Callback functions</h4>
+                        <h3>Callback functions</h3>
                         <p>A callback function is injected into another functions arguments. These methods can also be defined directly in the arguments.</p>
                         <p>Because functions are objects we can parse different methods into other methods, in which they will be executed when the initial function tells it to.</p>
                         <p>The callbacks can be either synchronous or asynchronous, depending on when the callback function will execute.</p>
@@ -170,7 +170,7 @@
                 <p>The most common loops in Javascript are for-loops and while-loops</p>
                 <ul>
                     <li>
-                        <h4>For-loop</h4>
+                        <h3>For-loop</h3>
                         <p>A for-loop is characterized by the keyword <b>for</b> in front of the statement itself.</p>
                         <p>The loop often relies on an incrementer, but can also be done as a <b>for/in</b>-loop.</p>
                         <div class="code">
@@ -206,12 +206,14 @@
                 <p>For-loops in Javascript are similar to the ones we find in Java.</p>
                 <p>However we don't need to declare i as an integer, as Java and Javascript don't have the same rules regarding data types.</p>
             </li>
+            <br>
             <li>
                 <h2>Arrays</h2>
                 <p>Arrays are collections that can hold different values. Different data types can be stored in the same array.</p>
+                <p>Javascript arrays has a bunch of inherited methods that can be used to achieve different results.</p>
                 <ul>
                     <li>
-                        <h4>Index</h4>
+                        <h3>Index</h3>
                         <p>To access data in an array we need to specify the index in which the desired data is located.</p>
                         <p>Since we can also store objects in an array, can parse a function from an array.</p>
                         <div class="code">
@@ -253,7 +255,7 @@
                         </div>
                     </li>
                     <li>
-                        <h4>Push</h4>
+                        <h3>Push</h3>
                         <p>This enables you to add, or rather push, new elements to an already existing array.</p>
                         <p>To print an array in a way we can easily read in the console we can use the table function in console.</p>
                         <div class="code">
@@ -267,25 +269,58 @@
                         </div>
                     </li>
                     <li>
-                        <h4>Slice</h4>
+                        <h3>Pop</h3>
+                        <p>Pop will remove the last element in an array and return it. This can be useful if you want </p>
+                        <div class="code">
+                            <span>let cars = ["Mercedes", "BMW", "Audi"]</span>
+                            <br>
+                            <span>console.table(cars)</span>
+                            <br><br>
+                            <span><span>// </span></span>
+                            <br><br>
+                            <span>cars.pop</span>
+                            <br>
+                            <span>console.table(cars)</span>
+                            <br><br>
+                            <span><span>// </span></span>
+                        </div>
                     </li>
                     <li>
-                        <h4>Spilce</h4>
+                        <h3>Slice</h3>
+                        <p>Slice will copy part of or an entire array to another array. This can be changed by the parameters given to the method.</p>
+                        <p>In the next example, the newCars array will have all cars from the first index and forward from the cars array.</p>
+                        <div class="code">
+                            <span>let newCars = cars.slice(1)</span>
+                            <br>
+                            <span>console.table(newCars)</span>
+                            <br>
+                            <span><span>// </span></span>
+                        </div>
                     </li>
                     <li>
-                        <h4>Pop</h4>
-                        <p>Pop will remove the last element in an array.</p>
+                        <h3>Spilce</h3>
+                        <p>If you want to remove part of an array, then you can use the spilce method.</p>
+                        <p>Other elements can be placed into the array instead, and this will push other elements forward.</p>
+                        <div class="code">
+                            
+                        </div>
                     </li>
                     <li>
-                        <h4>For each</h4>
+                        <h3>For each</h3>
                         <p></p>
+                        <div class="code">
+
+                        </div>
                     </li>
                 </ul>
             </li>
+            <br>
             <li>
                 <h2>Requests</h2>
             </li>
         </ul>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
