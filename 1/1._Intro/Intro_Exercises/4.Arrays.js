@@ -19,6 +19,12 @@ friends.push(first = {"name": "Thomas"}, second = {"name": "Markus"}, third =  {
 
 console.table(friends);
 
+let newArray = []
+
+newArray.push(me = {firstName: "Thomas", lastName: "Vindelev"}, teacher = {firstName: "Anders", lastName: "Latif"})
+
+console.table(newArray)
+
 // --------------------------------------
 // Exercise 3 - Get the index of first occurance of that value. 
 

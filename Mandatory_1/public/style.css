@@ -19,6 +19,11 @@
     color: rgb(53, 187, 0);
 }
 
+#tableEx {
+    height: 35%;
+    width: 35%;
+}
+
 pre {
     padding: 5px 10px 10px 10px;
     background-color: #1d1d1d;
