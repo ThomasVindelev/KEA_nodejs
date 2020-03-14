@@ -110,6 +110,10 @@ numbers.forEach(element => {
 
 console.table(discardedNumbers);
 
+for (i = 0; i < 2; i++) {
+    console.log("Hello, number",i)
+}
+
 // log the element if the number is above 6 or below 0
 // else push them to the array discardedNumbers
 
