@@ -58,9 +58,7 @@ console.log(diet.pop());
 
 let cars = ["Mercedes", "BMW", "Audi"]
 
-console.table(cars)
-
-cars.pop()
+cars.splice(cars.indexOf("BMW"), 0, "Toyota", "Honda", "Jaguar")
 
 console.table(cars)
 
