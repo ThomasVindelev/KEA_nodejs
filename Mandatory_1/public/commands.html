@@ -99,7 +99,45 @@
             <br>
             <li>
                 <h2>Express</h2>
-                <p>Express is a lightweight node.js tool for serving websites.</p>
+                <p>Express is a lightweight node.js tool for serving websites. It supports the different request methods that we look for in REST.</p>
+                <p>We can fetch Express by using the npm-library. We can simply type in <b>npm install express</b> into the terminal.</p>
+                <p>However we need to use the require()-method to actually make use of Express.</p>
+                <p>Also, we need some setup before we can run the actual server. This includes setting up a method that listens for activity on a certain port. In our case we use port 3000.</p>
+                <div class="code">
+                    <span>const express = require("express")</span>
+                    <br>
+                    <span>const app = express()</span>
+                    <br><br>
+                    <span>app.use(express.urlencoded({ extended: true }))</span>
+                    <br>
+                    <span>app.use(express.static(__dirname + '/public'))</span>
+                    <br><br>
+                    <span>const server = app.listen(3000, (error) => {</span>
+                    <br>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;if (error) {</span>
+                    <br>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("Server failed")</span>
+                    <br>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;} else {</span>
+                    <br>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(`Launched on port ${port}`)</span>
+                    <br>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;}</span>
+                    <br>
+                    <span>})</span>
+                    <br>
+                </div>
+                <br>
+                <p>We can now setup our first get method, which will in most cases be for the index page of our html.</p>
+                <p>In this function we create a callback function which takes the request and response as it's parameters.</p>
+                <p>This allows us to set the response to what we want the user to fetch.</p>
+                <div class="code">
+                    <span>app.get("/", (req, res) => {</span>
+                    <br>
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;return res.sendFile(__dirname + "/public/index.html")</span>
+                    <br>
+                    <span>})</span>
+                </div>
             </li>
             <br>
             <li>

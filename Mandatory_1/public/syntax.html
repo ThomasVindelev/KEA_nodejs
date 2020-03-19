@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Syntax</title>
 </head>
-
+<header id="headerloader"></header>
 <body>
-    <header id="headerloader"></header>
     <div class="page">
         <h1>Syntax documentation</h1>
         <p>Javascript syntax is not that different from Java, however it's very different in terms of what we're allowed to do and how we can do it.</p>
@@ -168,7 +166,7 @@
             <li>
                 <h2>Loops</h2>
                 <p>Loops can be used to run a block of code several times with, sometimes, different outcomes.</p>
-                <p>The most common loops in Javascript are for-loops and while-loops</p>
+                <p>The most common loops in Javascript are for-loops and while-loops.</p>
                 <ul>
                     <li>
                         <h3>For-loop</h3>
@@ -201,6 +199,32 @@
                             <span><span>// Thomas</span></span>
                             <br>
                             <span><span>// Vindelev</span></span>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>While-loop</h3>
+                        <p>A while-loop will execute a task while a certain condition is true.</p>
+                        <p>These kinds of loops can get stuck in a <b>deadlock</b> if the conditional statement keeping it running is not updated.</p>
+                        <div class="code">
+                            <span>let i = 0</span>
+                            <br><br>
+                            <span>while (i > 5) {</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;console.log("Incrementer is now",i)</span>
+                            <br>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;i++</span>
+                            <br>
+                            <span>}</span>
+                            <br><br>
+                            <span><span>// Incrementer is now 0</span></span>
+                            <br>
+                            <span><span>// Incrementer is now 1</span></span>
+                            <br>
+                            <span><span>// Incrementer is now 2</span></span>
+                            <br>
+                            <span><span>// Incrementer is now 3</span></span>
+                            <br>
+                            <span><span>// Incrementer is now 4</span></span>
                         </div>
                     </li>
                 </ul>
@@ -271,7 +295,7 @@
                     </li>
                     <li>
                         <h3>Pop</h3>
-                        <p>Pop will remove the last element in an array and return it. This can be useful if you want </p>
+                        <p>Pop will remove the last element in an array and return it. It can also just be used to remove an item, if you ignore the returned object.</p>
                         <div class="code">
                             <span>let cars = ["Mercedes", "BMW", "Audi"]</span>
                             <br>
@@ -279,7 +303,7 @@
                             <br><br>
                             <img src="./img/Array.png" alt="">
                             <br><br>
-                            <span>cars.pop</span>
+                            <span>cars.pop()</span>
                             <br>
                             <span>console.table(cars)</span>
                             <br><br>
@@ -337,7 +361,6 @@
             <br>
         </ul>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
