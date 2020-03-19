@@ -1,4 +1,5 @@
 const express = require("express")
+const fs = require("fs")
 const app = express()
 
 app.use(express.json())
@@ -10,13 +11,26 @@ app.use(express.static("public"))
 // port will default to 3000 if no port is given
 const port = process.env.PORT ? process.env.PORT : 3000
 
+// node has access to our filesystem, as opposed to regular javascript
+const navbarPage = fs.readFileSync(__dirname + "/public/navbar/navbar.html", "utf8")
+const frontPage = fs.readFileSync(__dirname + "/public/frontpage/index.html", "utf8")
+const footerPage = fs.readFileSync(__dirname + "/public/footer/footer.html", "utf8")
+const playerPage = fs.readFileSync(__dirname + "/public/player/player.html", "utf8")
+
 app.get("/", (req, res) => {
-    return res.sendFile(`${__dirname}/public/frontpage/index.html`)
+    return res.send(navbarPage + frontPage + footerPage)
 })
 
 app.get("/player/:videoid", (req, res) => {
-    return res.sendFile(`${__dirname}/public/player/player.html`)
+    return res.send(navbarPage + playerPage + footerPage)
 })
+
+// every file is it's own module
+// import routes
+const videosRoute = require("./routes/videoRoute")
+
+// setup routes
+app.use(videosRoute)
 
 const server = app.listen(port, (error) => {
     if (error) {

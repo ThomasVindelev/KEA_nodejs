@@ -1,5 +1,10 @@
-
-    <h1>This is the keatube footer</h1>
-
+<footer>
+    <p id="copyright-paragraph"></p>
+</footer>
+<script>
+    const currentYear = new Date().getFullYear()
+    console.log(currentYear)
+    $("#copyright-paragraph").append("Copyright © All rights reserved " + currentYear)
+</script>
 </body>
 </html>
