@@ -28,12 +28,12 @@ app.get("/player/:videoid", (req, res) => {
 })
 
 app.get("/upload", (req, res) => {
-    return res.sendFile(navbarPage + uploadPage + footerPage)
+    return res.send(navbarPage + uploadPage + footerPage)
 })
 
 // every file is it's own module
 // import routes
-const videosRoute = require("./routes/videoRoute")
+const videosRoute = require("./routes/videos")
 
 // setup routes
 app.use(videosRoute)
