@@ -10,7 +10,7 @@ app.use(express.static("public"))
 app.use(express.static("videos"))
 
 // port will default to 3000 if no port is given
-const port = process.env.PORT ? process.env.PORT : 3000
+const port = process.env.PORT ? process.env.PORT : 8000
 
 // node has access to our filesystem, as opposed to regular javascript
 const navbarPage = fs.readFileSync(__dirname + "/public/navbar/navbar.html", "utf8")
