@@ -1,0 +1,56 @@
+MySQL vs. NoSQL
+
+use [databasename]
+
+show dbs
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use animalfarm
+switched to db animalfarm
+> ping
+2020-04-16T12:36:53.385+0200 E  QUERY    [js] uncaught exception: ReferenceError: ping is not defined :
+@(shell):1:1
+> db.createCollection("buildings")
+{ "ok" : 1 }
+> show dbs
+admin       0.000GB
+animalfarm  0.000GB
+config      0.000GB
+local       0.000GB
+> db.animalfarm
+animalfarm.animalfarm
+> ls
+[native code]
+> lsls
+2020-04-16T12:40:37.404+0200 E  QUERY    [js] uncaught exception: ReferenceError: lsls is not defined :
+@(shell):1:1
+> ls
+[native code]
+> db.buildings.insert( { type: "windmill" } )
+WriteResult({ "nInserted" : 1 })
+> db.buildings.find()
+{ "_id" : ObjectId("5e98366d828752f33a6d2d85"), "type" : "windmill" }
+> db.buildings.find({})
+{ "_id" : ObjectId("5e98366d828752f33a6d2d85"), "type" : "windmill" }
+> db.buildings.find({type:"windmill"})
+{ "_id" : ObjectId("5e98366d828752f33a6d2d85"), "type" : "windmill" }
+> db.buildings.insert( { type: "barn" } )
+WriteResult({ "nInserted" : 1 })
+> db.buildings.find({type:"windmill"})
+{ "_id" : ObjectId("5e98366d828752f33a6d2d85"), "type" : "windmill" }
+> db.buildings.find({})
+{ "_id" : ObjectId("5e98366d828752f33a6d2d85"), "type" : "windmill" }
+{ "_id" : ObjectId("5e983818828752f33a6d2d86"), "type" : "barn" }
+> db.buildings.find({})
+{ "_id" : ObjectId("5e98366d828752f33a6d2d85"), "type" : "windmill" }
+{ "_id" : ObjectId("5e983818828752f33a6d2d86"), "type" : "barn" }
+> db.buildings.find({$exists: true})
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "unknown top level operator: $exists",
+        "code" : 2,
+        "codeName" : "BadValue"
+}

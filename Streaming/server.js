@@ -9,7 +9,7 @@ app.use(express.static(__dirname + "./public"))
 let clients = 0
 
 io.on("connection", (socket) => {
-    socket.on("newClient", () => {
+    socket.on("NewClient", () => {
         if (clients < 2) {
             if (clients == 1) {
                 this.emit("createPeer")

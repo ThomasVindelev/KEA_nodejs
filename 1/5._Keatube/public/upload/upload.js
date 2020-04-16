@@ -1,3 +1,6 @@
+// CommonJS
+const Swal = require('sweetalert2')
+
 let fileValid = false
 
 function validateForm() {
@@ -34,4 +37,5 @@ function handleFileUpload(files) {
     }
 
     fileValid = true
+
 }
