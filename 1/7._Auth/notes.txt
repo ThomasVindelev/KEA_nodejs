@@ -1,0 +1,5 @@
+npm i knex
+npm i mysql
+
+knex init 
+This will create the knoxfile.js

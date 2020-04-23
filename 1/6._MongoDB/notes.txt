@@ -1,5 +1,7 @@
 MySQL vs. NoSQL
 
+KØR EXE-FILERNE I PROGRAM FILES UNDER MONGODB - MONGO og MONGOD
+
 use [databasename]
 
 show dbs
