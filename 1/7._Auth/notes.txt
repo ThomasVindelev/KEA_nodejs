@@ -2,4 +2,10 @@ npm i knex
 npm i mysql
 
 knex init 
+knex migrate:latest
+knex migrate:up
+knex migrate:rollback
+knex seed:make [name]
+knex seed:run
+
 This will create the knoxfile.js
