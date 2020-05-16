@@ -7,19 +7,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
+
+    <p>Sign in</p>
     <div>
         <form action="/login" method="POST">
-            <input type="text" placeholder="username" name="username">
-            <input type="password" name="password">
-            <button type="submit">Submit</button>
+            <input type="text" placeholder="Username" name="username">
+            <input type="password" placeholder="Password" name="password">
+            <button type="submit">Sign in</button>
         </form>
     </div>
 
+    <br>
+    <p>Don't have an account yet? Sign up today!</p>
     <div>
         <form action="/signup" method="POST">
-            <input type="text" placeholder="username" name="signupusername">
-            <input type="password" placeholder="Password" name="signuppassword">
-            <button type="submit">Submit</button>
+            <input type="text" placeholder="Username" name="signupUsername">
+            <input type="password" placeholder="Password" name="signupPassword">
+            <input type="password" placeholder="Repeat password" name="passwordRepeat">
+            <button type="submit">Sign up</button>
         </form>
     </div>
 </body>

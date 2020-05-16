@@ -23,26 +23,23 @@ router.post("/login", async (req, res) => {
             intro: 'Empty fields!',
             message: 'Please insert the requested fields!'
         }
-        console.log(req.session.message)
         return res.redirect("/")
     } else {
-        const {username, password} = req.body;
-
+        const { username, password } = req.body;
         const user = await User.query().select().where("username", username).limit(1);
-
         bcrypt.compare(password, user[0].password, (err, same) => {
             if (err) {
-                console.log(err)
                 return res.send({ error: err })
             } else {
-                console.log(user[0].id)
-                req.session.user = { id: user[0].id }
-                console.log("Welcome", req.session.user)
-                return res.sendFile(path.resolve("public/home.html"))
+                req.session.user = { id: user[0].id, role: user[0].role_id }
+                if (req.session.user.role == 1) {
+                    return res.sendFile(path.resolve("public/admin/dashboard.html"))
+                } else {
+                    return res.sendFile(path.resolve("public/home.html"))
+                }
             }
         })
     }
-    // sessions
 });
 
 const User = require('../models/User');
@@ -50,18 +47,20 @@ const Role = require('../models/Role')
 
 router.post('/signup', async (req, res) => {
     // res.send({ message: "signup" });
-    const {username, password, passwordRepeat} = req.body;
+    const {signupUsername, signupPassword, passwordRepeat} = req.body;
 
-    const isPasswordTheSame = password === passwordRepeat;
+    console.log(req.body)
 
-    if (username && password && isPasswordTheSame) {
-        if (password.length < 8) {
+    const isPasswordTheSame = signupPassword === passwordRepeat;
+
+    if (signupUsername && signupPassword && isPasswordTheSame) {
+        if (signupPassword.length < 8) {
             return res.status(404).send({ response: "Password not long enough" });
         } else {
 
             try {
 
-                const userFound = await User.query().select().where("username", username).limit(1);
+                const userFound = await User.query().select().where("username", signupUsername).limit(1);
 
                 if (userFound.length > 0) {
 
@@ -71,16 +70,16 @@ router.post('/signup', async (req, res) => {
 
                     const userRole = await Role.query().select().where('role', 'USER');
 
-                    const hashedPassword = await bcrypt.hash(password, saltrounds)
+                    const hashedPassword = await bcrypt.hash(signupPassword, saltrounds)
                     
                     await User.query().insert({
-                        username: username,
+                        username: signupUsername,
                         password: hashedPassword,
                         age: 24,
                         role_id: userRole[0].id
                     });
 
-                    return res.send({ response: username });
+                    return res.send({ response: signupUsername });
 
                 }
             } catch (error) {
