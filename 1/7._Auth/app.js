@@ -17,16 +17,10 @@ const limiter = rateLimit({
     max: 8 // limit each IP to 100 requests per windowMs
 });
 
-
-
-
 app.use("/login", limiter)
 app.use("/signup", limiter)
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-
-
-
 
 /* Add Routes */
 const authRoutes = require('./routes/auth.js');
@@ -36,14 +30,10 @@ app.use(authRoutes);
 app.use(usersRoute);
 app.use(mailRoute);
 
-
-
-
 /* Setup Objection + Knex */
 const { Model } = require('objection');
 const Knex = require('knex');
 const knexFile = require('./knexfile.js');
-
 
 app.use(express.static(__dirname + "/public"))
 
@@ -56,9 +46,6 @@ app.use((req, res, next) => {
     console.log(new Date())
     next()
 })
-
-
-
 
 /* index path */
 app.get('/', (req, res) => {

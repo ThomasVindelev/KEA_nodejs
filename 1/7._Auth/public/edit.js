@@ -7,21 +7,20 @@ $(document).ready(() => {
             username: $('#newUsername').val()
         }
 
-        console.log(value)
         if (value.username != '') {
             $.post('/newUsername', value, ({ response }) => {
                 if (response === 'success') {
-                    alert(`Successfully changed username to ${value.username}`)
-                    return window.location.href = '/edit'
+                    alert(`Successfully changed username to ${value.username}`);
+                    return window.location.href = '/edit';
                 } else {
-                    alert(response)
+                    alert(response);
                 }
-            })
+            });
         }
         
     }
 
-    editPassword = (event) => {
+    a = (event) => {
         event.preventDefault();
 
         const values = {
