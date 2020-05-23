@@ -4,27 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xD</title>
+    <link href="/styles.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-
-    <p>Sign in</p>
-    <div>
-        <form action="/login" method="POST">
-            <input type="text" placeholder="Username" name="username">
-            <input type="password" placeholder="Password" name="password">
-            <button type="submit">Sign in</button>
+    <script src="index.js" type="text/javascript"></script>
+    <h1 id="headline">E-mail Application</h1>
+    <div class="form-style">
+        <p class="box-text">Sign in</p>
+        <form>
+            <div class="input-lane">
+                <p class="input-label" for="username">Username</p>
+                <input class="input-field" type="text" placeholder="Username" id="username">
+            </div>
+            <div class="input-lane">
+                <p class="input-label" for="password">Password</p>
+                <input class="input-field" type="password" placeholder="Password" id="password">
+            </div>
+            <button class="submit-btn" type="submit" onclick="login(event)">Sign in</button>
         </form>
     </div>
 
-    <br>
-    <p>Don't have an account yet? Sign up today!</p>
-    <div>
+    <div class="form-style">
+        <p class="box-text">Sign up</p>
         <form action="/signup" method="POST">
-            <input type="text" placeholder="Username" name="signupUsername">
-            <input type="password" placeholder="Password" name="signupPassword">
-            <input type="password" placeholder="Repeat password" name="passwordRepeat">
-            <button type="submit">Sign up</button>
+            <div class="input-lane">
+                <p class="input-label" for="username">Username</p>
+                <input class="input-field" type="text" placeholder="Username" id="signupUsername">
+            </div>
+            <div class="input-lane">
+                <p class="input-label" for="password">Password</p>
+                <input class="input-field" type="password" placeholder="Password" id="signupPassword">
+            </div>
+            <div class="input-lane">
+                <p class="input-label" for="password">Repeat password</p>
+                <input class="input-field" type="password" placeholder="Repeat password" id="passwordRepeat">
+            </div>
+            <button class="submit-btn" type="submit" onclick="signup(event)">Sign up</button>
         </form>
     </div>
 </body>

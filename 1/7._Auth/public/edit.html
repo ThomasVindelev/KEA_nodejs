@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit profile</title>
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="edit.js"></script>
+</head>
+<body>
+    <button id="logout-btn" type="button" onclick="logout(event)">Log out</button>
+    <a href="/home"><button id="next-page" type="button">Mail</button></a>
+    <h1 id="headline">Profile</h1>
+    <div class="form-style">
+        <p class="box-text">Edit username</p>
+        <form>
+            <div class="input-lane">
+                <p class="input-label" for="username">New username</p>
+                <input class="input-field" type="text" placeholder="Subject" id="newUsername">
+            </div>
+            <button class="submit-btn" type="button" onclick="editUsername(event)">Send</button>
+        </form>
+    </div>
+    <div class="form-style">
+        <p class="box-text">Edit password</p>
+        <form>
+            <div class="input-lane">
+                <p class="input-label" for="oldPassword">Old password</p>
+                <input class="input-field" type="text" placeholder="Old password" id="oldPassword">
+            </div>
+            <div class="input-lane">
+                <p class="input-label" for="newPassword">New password</p>
+                <input class="input-field" type="text" placeholder="New password" id="newPassword">
+            </div>
+            <div class="input-lane">
+                <p class="input-label" for="passwordRepeat">Repeat new password</p>
+                <input class="input-field" type="text" placeholder="Repeat new password" id="passwordRepeat">
+            </div>
+            <button class="submit-btn" type="submit" onclick="editPassword(event)">Send</button>
+        </form>
+    </div>
+</body>
+</html>

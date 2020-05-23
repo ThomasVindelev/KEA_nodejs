@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Homepage</title>
 </head>
 <body>
-    Hejsa, du loggede ind!
-
-    <form action="/sendMail" method="POST">
-        <input type="text" placeholder="Message" name="message">
-        <input type="text" placeholder="Subject" name="subject">
-        <input type="text" placeholder="Reciever e-mail" name="email">
-        <button type="submit">Send</button>
-    </form>
+    <script src="home.js" type="text/javascript"></script>
+    <button id="logout-btn" type="button" onclick="logout(event)">Log out</button>
+    <a href="/edit"><button id="next-page" type="button">Profile</button></a>
+    <h1 id="headline">Home</h1>
+    <div class="form-style">
+        <p class="box-text">Send mail</p>
+        <form>
+            <div class="input-lane">
+                <p class="input-label" for="subject">Subject</p>
+                <input class="input-field" type="text" placeholder="Subject" id="subject">
+            </div>
+            <div class="input-lane">
+                <p class="input-label" for="message">Message</p>
+                <textarea class="input-field" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+            <div class="input-lane">
+                <p class="input-label" for="email">Recieving e-mail</p>
+                <input class="input-field" type="text" placeholder="Reciever e-mail" id="email">
+            </div>
+            <button class="submit-btn" type="submit" onclick="sendMail(event)">Send</button>
+        </form>
+    </div>
 </body>
 </html>

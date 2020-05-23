@@ -1,14 +1,13 @@
 const express = require('express');
 const app = express();
 const session = require("express-session")
-const uuid = require("uuid-random")
+const uuid = require('uuid').v4
 
 // express session setup using the database
 app.use(session({
     secret: require('./config/mysql_credentials.js').sessionSecret,
     resave: false,
-    saveUninitialized: true,
-    cookie: { secure: true }
+    saveUninitialized: true
 }))
 
 // ratelimit
@@ -46,7 +45,7 @@ const Knex = require('knex');
 const knexFile = require('./knexfile.js');
 
 
-
+app.use(express.static(__dirname + "/public"))
 
 // Initialize knex.
 const knex = Knex(knexFile.development);
@@ -63,12 +62,24 @@ app.use((req, res, next) => {
 
 /* index path */
 app.get('/', (req, res) => {
-    // knex.select().from('users').then((users) => {
-    //     console.log(users);
-    // });
-    // req.session.id = uuid()
     return res.sendFile(__dirname + "/public/index.html");
 });
+
+app.get("/home", (req, res) => {
+    if (req.session.user) {
+        return res.sendFile(__dirname + "/public/home.html")
+    } else {
+        return res.status(404).send({ response: 'Log in to view this page' })
+    }
+})
+
+app.get('/edit', (req, res) => {
+    if (req.session.user) {
+        return res.sendFile(__dirname + "/public/edit.html")
+    } else {
+        return res.status(404).send({ response: 'Log in to view this page' })
+    }
+})
 
 /* Start Server */
 const PORT = 3000;
