@@ -23,8 +23,8 @@ router.post('/sendMail', async (req, res) => {
             if (err) {
                 return res.send({ response: 'Something went wrong...' });
             } 
-            return res.send({ response: 'success' });
         });
+        return res.send({ response: 'success' });
     }
     return res.send({ response: 'Log in to use this feature' });
 });
