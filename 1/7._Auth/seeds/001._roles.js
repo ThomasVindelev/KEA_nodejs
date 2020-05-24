@@ -5,4 +5,4 @@ exports.seed = function(knex) {
     { role: 'USER' },
     { role: 'ANONYMOUS' }
   ]);
-};
+}

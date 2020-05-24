@@ -10,16 +10,14 @@ $(document).ready(() => {
             email: $('#email').val()
         }
 
-        console.log(values)
-
         $.post('/sendMail', values, ({ response }) => {
             if (response === 'success') {
-                alert('Mail has been sent successfully!')
-                return window.location.href = '/home'
+                alert('Mail has been sent successfully!');
+                return window.location.href = '/home';
             } else {
-                alert(response)
+                alert(response);
             }
-        })
+        });
 
     }
 
@@ -28,8 +26,8 @@ $(document).ready(() => {
 
         $.post('/logout', ({ response }) => {
             alert(response);
-            window.location.href = '/'
-        })
+            window.location.href = '/';
+        });
     }
 
-})
+});

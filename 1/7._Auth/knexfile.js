@@ -1,8 +1,6 @@
 // Update with your config settings.
-const creds = require("./config/mysql_credentials.js")
-const { knexSnakeCaseMappers} = require('objection');
-
-console.log(creds)
+const creds = require('./config/mysql_credentials.js');
+const { knexSnakeCaseMappers } = require('objection');
 
 module.exports = {
 
@@ -17,4 +15,4 @@ module.exports = {
     // ...knexSnakeCaseMappers
   }
 
-};
+}

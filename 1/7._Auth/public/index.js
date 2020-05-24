@@ -10,9 +10,9 @@ $(document).ready(() => {
     
         $.post('/login', values, ({ response }) => {
             if (response === 'success') {
-                return window.location.href = '/home'
+                return window.location.href = '/home';
             } else {
-                alert(response)
+                alert(response);
             }
         });
     }
@@ -30,9 +30,9 @@ $(document).ready(() => {
             if (response === 'success') {
                 alert(`Successfully created user ${values.username}`)
             } else {
-                alert(response)
+                alert(response);
             }
         });
     }
-})
+});
 

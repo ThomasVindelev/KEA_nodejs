@@ -33,17 +33,17 @@ $(document).ready(() => {
             if (values.newPassword === values.passwordRepeat) {
                 $.post('/newPassword', values, ({ response }) => {
                     if (response === 'success') {
-                        alert('Successfully changed password')
+                        alert('Successfully changed password');
                         return window.location.href = '/edit'
                     } else {
-                        alert(response)
+                        alert(response);
                     }
                 })
             } else {
                 alert('Passwords not matching');
             }
         } else {
-            alert('Please fill all fields')
+            alert('Please fill all fields');
         }
     }
 
@@ -53,7 +53,7 @@ $(document).ready(() => {
         $.post('/logout', ({ response }) => {
             alert(response);
             window.location.href = '/'
-        })
+        });
     }
 
-})
+});

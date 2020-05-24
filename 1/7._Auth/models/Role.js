@@ -1,6 +1,6 @@
 const { Model } = require('objection');
 
-const User = require('./User')
+const User = require('./User');
 
 class Role extends Model {
     static tableName = 'roles';
