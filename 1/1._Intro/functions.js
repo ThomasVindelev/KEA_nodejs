@@ -57,8 +57,10 @@ prepareIntroduction(introduce, "Thomas");
 // another way of writing functions
 
 const newFunction = (name) => {
-    console.log("ahAHAhaHAAHHAaaHa ligemeget")
+    console.log("ahAHAhaHAAHHAaaHa ligemeget", name)
 }
+
+newFunction("lmao")
 
 const aboutMe = me => {
     console.log("My hobby is", me.hobby);
