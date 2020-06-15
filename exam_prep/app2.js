@@ -3,6 +3,9 @@ const app = express()
 
 const PORT = 3000
 
+const routes = require('./route.js')
+
+app.use(routes)
 app.use(express.static('public'))
 
 app.get('/home', (req, res) => {
